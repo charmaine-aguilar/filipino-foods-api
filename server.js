@@ -32,7 +32,7 @@ const foods = {
 // ==========
 // MIDDLEWARE
 // ==========
-
+app.use(cors())
 
 // ==========
 // HANDLERS
