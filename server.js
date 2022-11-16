@@ -1,9 +1,12 @@
 // Lets the server use express
-const { response } = require('express')
+const response = require('express')
 const express = require('express')
 
 // Lets the server use all the method included in express
 const app = express()
+
+// Lets the user fetch the API from localhost
+const cors = require('cors')
 
 const PORT = 8000
 
