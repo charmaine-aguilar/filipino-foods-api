@@ -1,6 +1,8 @@
 # Filipino Foods API
 A simple API that returns a JSON of some of the most common Filipino food showcasing their ingredients and more. Users can fetch this API via localhost or remote.
 
+#### Check it out here: https://filipino-foods-api.herokuapp.com/
+
 # Tech used
 Node.js, Express, Heroku for hosting
 
