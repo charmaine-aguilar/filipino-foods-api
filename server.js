@@ -22,10 +22,6 @@ const foods = {
     'pancit': {
         'meat': ['chicken', 'pork', 'crab', 'mussels'],
         'vegetables': ['garlic', 'onion', 'bell peppers', 'cabbage', 'string beans']
-    },
-    'unknown': {
-        'meat': 'unknown',
-        'vegetables': 'unknown'
     }
 }
 
@@ -44,19 +40,20 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/:food', (request, response) => {
-    const food = request.params.food.toLowerCase()
-    
-    if((foods[food])) {
-        response.json(foods[food])
-        console.log(`${food} JSON SENT`);
-    } else {
-        response.json(foods['unknown'])
-        console.log(`${food} NOT FOUND`);
-    }
-
+// GET: Request for all food
+app.get('/api/foods', (request, response) => {
+    response.json(foods)
 })
 
+
+// GET: Request for specific food
+app.get('/api/foods/:foodName', (request, response) => {
+    const food = request.params.foodName.toLowerCase()
+    response.json(foods[food])
+})
+
+
+// LISTEN: on PORT 8000
 app.listen(process.env.PORT || PORT, () => {
     console.log(`SERVER STATUS: RUNNING on PORT ${PORT}`);
 })
