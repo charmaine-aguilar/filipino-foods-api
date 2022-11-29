@@ -16,10 +16,10 @@ Node.js, Express, Heroku for hosting
 
 ### For Users
 #### To Access all food
-- Use fetch on `https://filipino-foods-api.herokuapp.com/api`
+- Use fetch on `https://filipino-foods-api.onrender.com/api/foods`
 
 #### To Access a specific food
-- Use fetch on `https://filipino-foods-api.herokuapp.com/api/${food-name}`
-- Replace ${food-name} with the foodname you want to search
+- Use fetch on `https://filipino-foods-api.onrender.com/api/foods/foodName`
+- Replace foodName with the foodname you want to search
 
 Note: This is a WIP!
